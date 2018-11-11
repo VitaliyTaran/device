@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://www.example.com/computer-parts"
+        targetNamespace="http://www.example.com/computer-parts"
+        elementFormDefault="qualified">
+    <element name="computer-parts">
+        <complexType>
+            <sequence>
+                <element ref="tns:computer-part"
+                         minOccurs="0"
+                         maxOccurs="unbounded">
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="computer-part" type="tns:computer-part" abstract="true"/>
+    <element name="inner-component" type="tns:inner-component" substitutionGroup="tns:computer-part"/>
+    <element name="outer-component" type="tns:outer-component" substitutionGroup="tns:computer-part"/>
+
+
+    <complexType name="computer-part">
+        <sequence>
+            <element type="string" name="firm"/>
+            <element type="int" name="price"/>
+            <element type="int" name="power-consumption"/>
+        </sequence>
+        <attribute name="name" type="string"/>
+        <attribute name="id" type="ID" use="optional"/>
+    </complexType>
+    <complexType name="inner-component">
+        <complexContent>
+            <extension base="tns:computer-part">
+                <sequence>
+                    <element type="boolean" name="with-cooler"/>
+                    <element name="port">
+                        <simpleType>
+                            <restriction base="string">
+                                <enumeration value="DIMM"></enumeration>
+                                <enumeration value="SOCKET"></enumeration>
+                                <enumeration value="M_TWO"></enumeration>
+                                <enumeration value="SATA"></enumeration>
+                                <enumeration value="PCI_EXPRESS"></enumeration>
+                            </restriction>
+                        </simpleType>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="outer-component">
+        <complexContent>
+            <extension base="tns:computer-part">
+                <sequence>
+                    <element name="group">
+                        <simpleType>
+                            <restriction base="string">
+                                <enumeration value="INPUT_OUTPUT_DEVICE"></enumeration>
+                                <enumeration value="MULTIMEIDA"></enumeration>
+                            </restriction>
+                        </simpleType>
+                    </element>
+                    <element name="port">
+                        <simpleType>
+                            <restriction base="string">
+                                <enumeration value="HDMI"></enumeration>
+                                <enumeration value="JACK_THREE_DOT_FIVE"></enumeration>
+                                <enumeration value="USB"></enumeration>
+                            </restriction>
+                        </simpleType>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+</schema>

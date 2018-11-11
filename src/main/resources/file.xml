@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices>
+    <inner-device id="ID-1" name="CPU">
+        <firm>Intel</firm>
+        <price>300</price>
+        <power-consumption>75</power-consumption>
+        <with-cooler>true</with-cooler>
+        <port>SOCKET</port>
+    </inner-device>
+    <inner-device id="ID-2" name="Main Card">
+        <firm>MSI</firm>
+        <price>100</price>
+        <power-consumption>10</power-consumption>
+        <with-cooler>false</with-cooler>
+        <port>PCI_EXPRESS</port>
+    </inner-device>
+    <inner-device id="ID-3" name="Ram">
+        <firm>ASUS</firm>
+        <price>160</price>
+        <power-consumption>10</power-consumption>
+        <with-cooler>false</with-cooler>
+        <port>DIMM</port>
+    </inner-device>
+    <inner-device id="ID-4" name="Rom (hdd)">
+        <firm>Barracuda</firm>
+        <price>90</price>
+        <power-consumption>10</power-consumption>
+        <with-cooler>false</with-cooler>
+        <port>SATA</port>
+    </inner-device>
+    <inner-device id="ID-5" name="Rom (ssd)">
+        <firm>Kingston</firm>
+        <price>100</price>
+        <power-consumption>3</power-consumption>
+        <with-cooler>false</with-cooler>
+        <port>M_TWO</port>
+    </inner-device>
+    <outer-device id="ID-6" name="monitor">
+        <firm>BenQ</firm>
+        <price>200</price>
+        <power-consumption>40</power-consumption>
+        <group>INPUT_OUTPUT_DEVICE</group>
+        <port>HDMI</port>
+    </outer-device>
+    <outer-device id="ID-7" name="Speakers">
+        <firm>JBC</firm>
+        <price>100</price>
+        <power-consumption>50</power-consumption>
+        <group>MULTIMEIDA</group>
+        <port>JACK_THREE_DOT_FIVE</port>
+    </outer-device>
+    <outer-device id="ID-8" name="Mouse">
+        <firm>A4Tech</firm>
+        <price>30</price>
+        <power-consumption>1</power-consumption>
+        <group>INPUT_OUTPUT_DEVICE</group>
+        <port>USB</port>
+    </outer-device>
+    <outer-device id="ID-9" name="Keyboard">
+        <firm>Razer</firm>
+        <price>50</price>
+        <power-consumption>2</power-consumption>
+        <group>INPUT_OUTPUT_DEVICE</group>
+        <port>USB</port>
+    </outer-device>
+    <outer-device id="ID-10" name="Headphones">
+        <firm>Plantronics</firm>
+        <price>100</price>
+        <power-consumption>5</power-consumption>
+        <group>MULTIMEIDA</group>
+        <port>JACK_THREE_DOT_FIVE</port>
+    </outer-device>
+</devices>
